@@ -1,0 +1,72 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 15px;
+}
+
+/* Layout */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+.header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #f5f2f2;
+  color: #000000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: end;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: flex;
+  margin-right: 10px;
+}
+
+.navbar ul li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+  background-color: #cfefef;
+  
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
