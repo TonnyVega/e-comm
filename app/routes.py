@@ -1,16 +1,18 @@
 from flask import flash, render_template, request, url_for
 from app import app
 
+from app.models import User
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-  return render_template('home.html')
-
+    
+    users = User.query.all()  
+    return render_template('home.html', users=users)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-  return render_template('login.html')
+  return render_template('login.html', title='login')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():

@@ -4,11 +4,13 @@ from flask_migrate import Migrate
 
 
 
-
 app= Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://****:****@localhost/ecomm'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:tony@localhost/ecomm'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+print("connected to db, perhaps")
 
 db = SQLAlchemy(app)
+from app.models import User
 migrate= Migrate(app, db)
 
 
